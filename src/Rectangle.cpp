@@ -5,7 +5,6 @@
 
 #include "Rectangle.h"
 
-
 Rectangle::Rectangle(double w, double h) {
 
     width = w;
@@ -16,12 +15,8 @@ std::string Rectangle::getName() {
     return name;
 }
 
-double Rectangle::getPerimeter() {
-    return 2 * (width + height);
-}
+int Rectangle::getAngles() const {
 
-double Rectangle::getArea() {
-    return width * height;
+    return ang;
 }
-
 Rectangle::~Rectangle() {}

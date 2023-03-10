@@ -3,24 +3,18 @@
 // THIS IS AN AREA WHERE YOU SHOULD WRITE YOUR CODE AND MAKE CHANGES
 // /////////////////////////////////////////////////////////////////////////////
 
-#include "GeometricShape.h"
-#include "ShapeInterface.h"
+#include "Rectangle.h"
 
-using namespace std;
-
-class Square : public GeometricShape, public ShapeInterface
+class Square : public Rectangle
 {
 private:
-    const string name = "Square";
-    double edge;
+    std::string name = "Square";
+
 public:
-    Square(double e);
+    Square(double edge);
 
-    string getName() override;
-
-    double getPerimeter() override;
-
-    double getArea() override;
+    std::string getName() override;
 
     ~Square();
 };
+

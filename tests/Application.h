@@ -18,13 +18,12 @@ private:
 
     void testRectangleCreateObject();
     void testRectangleName();
-    void testRectangleArea();
-    void testRectanglePerimeter();
+    void testRectangleAngles();
     void testShapeFactoryRectangleCreateObject();
 
     void testSquareCreateObject();
     void testSquareName();
-    void testSquareArea();
-    void testSquarePerimeter();
+    void testSquareAngles();
     void testShapeFactorySquareCreateObject();
+
 };

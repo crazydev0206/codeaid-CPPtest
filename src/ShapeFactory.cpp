@@ -5,12 +5,14 @@
 // /////////////////////////////////////////////////////////////////////////////
 
 
+
 #include "ShapeFactory.h"
 #include "UnsupportedShapeException.h"
 #include "WrongParamCountException.h"
 #include "Circle.h"
-#include "Rectangle.h"
 #include "Square.h"
+#include "Rectangle.h"
+
 
 GeometricShape* ShapeFactory::createShape(const std::string& shape, const std::vector<double>& parameters)
 {
@@ -36,7 +38,7 @@ GeometricShape* ShapeFactory::createShape(const std::string& shape, const std::v
 	}
     else if(!shape.compare("Square")) {
         if(parameters.size() != 1)
-			throw WrongParamCountException();
+            throw WrongParamCountException();
         double e = parameters.at(0);
         return new Square(e);
     }

@@ -24,14 +24,12 @@ int Application::run()
 
     testRectangleCreateObject();
     testRectangleName();
-    testRectangleArea();
-    testRectanglePerimeter();
+    testRectangleAngles();
     testShapeFactoryRectangleCreateObject();
 
     testSquareCreateObject();
     testSquareName();
-    testSquareArea();
-    testSquarePerimeter();
+    testSquareAngles();
     testShapeFactorySquareCreateObject();
 
     return 0;
@@ -136,24 +134,11 @@ void Application::testRectangleName()
     assert(false);
 }
 
-void Application::testRectangleArea()
+void Application::testRectangleAngles()
 {
-    std::cout << "Running Rectangle area test, result: ";
+    std::cout << "Running Rectangle angles test, result: ";
     std::unique_ptr<Rectangle> rect = std::make_unique<Rectangle>(4.0, 5.0);
-    if (rect->getArea() == 20) {
-        std::cout << "Passed" << std::endl;
-        return;
-    }
-
-    std::cout << "Failed" << std::endl;
-    assert(false);
-}
-
-void Application::testRectanglePerimeter()
-{
-    std::cout << "Running Rectangle perimeter test, result: ";
-    std::unique_ptr<Rectangle> circle = std::make_unique<Rectangle>(4.0, 5.0);
-    if (circle->getPerimeter() == 18) {
+    if (rect->getAngles() == 4) {
         std::cout << "Passed" << std::endl;
         return;
     }
@@ -209,24 +194,11 @@ void Application::testSquareName()
     assert(false);
 }
 
-void Application::testSquareArea()
+void Application::testSquareAngles()
 {
-    std::cout << "Running Square area test, result: ";
+    std::cout << "Running Square angles test, result: ";
     std::unique_ptr<Square> sq = std::make_unique<Square>(3.0);
-    if (sq->getArea() == 9) {
-        std::cout << "Passed" << std::endl;
-        return;
-    }
-
-    std::cout << "Failed" << std::endl;
-    assert(false);
-}
-
-void Application::testSquarePerimeter()
-{
-    std::cout << "Running Square perimeter test, result: ";
-    std::unique_ptr<Square> sq = std::make_unique<Square>(3.0);
-    if (sq->getPerimeter() == 12) {
+    if (sq->getAngles() == 4) {
         std::cout << "Passed" << std::endl;
         return;
     }
@@ -255,3 +227,4 @@ void Application::testShapeFactorySquareCreateObject()
     std::cout << "Failed" << std::endl;
     assert(false);
 }
+
