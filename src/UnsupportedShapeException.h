@@ -7,7 +7,7 @@
 class UnsupportedShapeException : public std::exception {
     
     public:
-        char * what () {
+        const char * what() const noexcept {
                 return "Unsupported Shape Type Exception";
             }
 };

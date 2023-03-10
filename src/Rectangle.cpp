@@ -12,7 +12,7 @@ Rectangle::Rectangle(double w, double h) {
     height = h;
 }
 
-string Rectangle::getName() {
+std::string Rectangle::getName() {
     return name;
 }
 

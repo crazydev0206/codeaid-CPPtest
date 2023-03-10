@@ -16,9 +16,8 @@ GeometricShape* ShapeFactory::createShape(const std::string& shape, const std::v
 {
 	//TODO implement
 
-    if(shape == "Circle" || shape == "Rectangle" || shape == "Square")
-        bool passed = true;
-    else
+    if( !(shape == "Circle" || shape == "Rectangle" || shape == "Square") )
+
 		throw UnsupportedShapeException();
 
     if(!shape.compare("Circle")) {
@@ -45,9 +44,3 @@ GeometricShape* ShapeFactory::createShape(const std::string& shape, const std::v
 	return nullptr;
 }
 
-bool ShapeFactory::check_shape(std::string sh){
-
-    if(sh == "Circle" || sh == "Rectangle" || sh == "Square")
-        return true;
-    return false;
-}

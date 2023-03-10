@@ -4,19 +4,16 @@
 // /////////////////////////////////////////////////////////////////////////////
 #include "GeometricShape.h"
 #include "ShapeInterface.h"
-#include "Constants.h"
-
-using namespace std;
 
 class Circle : public GeometricShape, public ShapeInterface
 {
 private:
-    const string name = "Circle";
+    std::string name = "Circle";
     double radius;
 public:
     Circle(double r);
 
-    string getName() override;
+    std::string getName() override;
 
     double getPerimeter() override;
 

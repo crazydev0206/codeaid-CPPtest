@@ -15,4 +15,16 @@ private:
 	void testCircleArea();
 	void testCirclePerimeter();
 	void testShapeFactoryCircleCreateObject();
+
+    void testRectangleCreateObject();
+    void testRectangleName();
+    void testRectangleArea();
+    void testRectanglePerimeter();
+    void testShapeFactoryRectangleCreateObject();
+
+    void testSquareCreateObject();
+    void testSquareName();
+    void testSquareArea();
+    void testSquarePerimeter();
+    void testShapeFactorySquareCreateObject();
 };

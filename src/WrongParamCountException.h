@@ -8,7 +8,7 @@
 class WrongParamCountException : public std::exception {
     
     public:
-        char * what () {
+        const char * what() const noexcept {
                 return "Wrong number of parameters";
             }
 };

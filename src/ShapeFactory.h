@@ -17,8 +17,6 @@ class GeometricShape;
 /// </summary>
 class ShapeFactory
 {
-private:
-    bool check_shape(std::string sh);
 public:
     /// <summary>
     /// Creates a specific GeometricShape object from the given attributes.
